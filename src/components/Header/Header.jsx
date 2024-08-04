@@ -1,7 +1,7 @@
 import React from 'react'
 import AddTodo from './../AddTodo/AddTodo'
 import './Header.scss'
-import sunIcon from './../../assets/images/icon-sun.svg'
+import sunIcon from './../../assets/images/icon-moon.svg'
 
 export default function Header() {
   return (

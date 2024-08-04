@@ -4,7 +4,7 @@ deployement to gh pages test v
 Initialize project repository and React application v
 Set up project structure with directories for components, hooks, and styles v
 Implement state management with useReducer and define initial state v
-Create AddTodo component for adding new to-do items
+Create AddTodo component for adding new to-do items v
 Create TodoItem component for displaying and managing individual to-dos
 Create TodoList component for listing and reordering to-do items
 Create Filter component for filtering to-do items

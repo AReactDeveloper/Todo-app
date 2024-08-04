@@ -19,10 +19,10 @@
     }
 
     &:hover input~.checkmark {
-        background-color: #eee;
+        background-color: rgb(196, 196, 196)
     }
 
-    &:hover input:checked~.checkmark {
+    &:hover , input:checked~.checkmark {
         background: var(--bs-secondary);
         background-size: cover;
         /* Ensures the image covers the area */
@@ -41,6 +41,7 @@
     /* Show the checkmark when checked */
     & input:checked~.checkmark:after {
         display: block;
+        
     }
 
     /* Style the checkmark/indicator */
