@@ -8,11 +8,16 @@
     background-color: var(--bs-light);
     background-image: url('./../assets/images/bg-mobile-light.jpg');
     background-position:top;
-    background-size: contain;//calculated from the design intialy 
+    background-size: 100% 30%;//calculated from the design intialy 
     background-repeat: no-repeat;
     padding-inline: 40px;
     &__inner{
         max-width: 600px;
         margin-inline:auto;
+    }
+
+    @media (min-width : 500px) {
+        background-image: url('./../assets/images/bg-desktop-light.jpg');
+        background-position: top;
     }
 }
