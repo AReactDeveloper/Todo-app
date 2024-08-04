@@ -1,8 +1,9 @@
 Sure! Here’s the development process formatted as commit messages:
-
-Initialize project repository and React application
-Set up project structure with directories for components, hooks, and styles
-Implement state management with useReducer and define initial state
+"homepage": "https://AReactDeveloper.github.io/Todo-app v
+deployement to gh pages test v
+Initialize project repository and React application v
+Set up project structure with directories for components, hooks, and styles v
+Implement state management with useReducer and define initial state v
 Create AddTodo component for adding new to-do items
 Create TodoItem component for displaying and managing individual to-dos
 Create TodoList component for listing and reordering to-do items
@@ -19,3 +20,16 @@ Configure CI/CD pipelines for continuous integration and deployment
 Deploy application to hosting service
 Write and update documentation including README file
 Monitor application performance and make necessary updates
+
+// Apply the filter to the todos
+const filteredTodos = state.todos.filter(todo => {
+switch (state.filter) {
+case 'active':
+return !todo.completed;
+case 'completed':
+return todo.completed;
+case 'all':
+default:
+return true;
+}
+});

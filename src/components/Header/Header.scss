@@ -1,0 +1,12 @@
+.header{
+    color: var(--bs-light);
+    &__inner{
+        & h1{
+            font-weight: var(--fw-bold);
+            letter-spacing: 10px;
+        }
+        padding-block: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

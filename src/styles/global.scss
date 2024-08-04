@@ -1,0 +1,18 @@
+@use 'reset'; //reset file
+@use 'normalize'; //normlize css
+@use 'root'; //root with all varribles
+
+
+.App{
+    min-height: 100vh;
+    background-color: var(--bs-light);
+    background-image: url('./../assets/images/bg-mobile-light.jpg');
+    background-position:top;
+    background-size: contain;//calculated from the design intialy 
+    background-repeat: no-repeat;
+    padding-inline: 40px;
+    &__inner{
+        max-width: 600px;
+        margin-inline:auto;
+    }
+}

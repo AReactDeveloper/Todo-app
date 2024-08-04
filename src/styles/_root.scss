@@ -1,0 +1,32 @@
+/* Colors */
+:root {
+    --bs-primary: hsl(220, 98%, 61%);
+    --bs-secondary: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+    /* Neutral Colors for Light Theme */
+    --bs-light: hsl(0, 0%, 98%);
+    --bs-lighter: hsl(236, 33%, 92%);
+    --bs-lightest: hsl(233, 11%, 84%);
+    --bs-dark: hsl(236, 9%, 61%);
+    --bs-darker: hsl(235, 19%, 35%);
+
+    /* Neutral Colors for Dark Theme */
+    --bs-darkest: hsl(235, 21%, 11%);
+    --bs-dark: hsl(235, 24%, 19%);
+    --bs-light-dark: hsl(234, 39%, 85%);
+    --bs-light-dark-hover: hsl(236, 33%, 92%);
+    --bs-darker-dark: hsl(234, 11%, 52%);
+    --bs-darkest-dark: hsl(233, 14%, 35%);
+    --bs-darkest-dark-2: hsl(237, 14%, 26%);
+
+    /* Typography */
+    /* Font Sizes */
+    --fs-body: 18px;
+
+    /* Font Families and Weights */
+    --ff-primary: 'Josefin Sans', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+

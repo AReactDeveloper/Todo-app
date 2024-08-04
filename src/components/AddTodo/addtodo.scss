@@ -1,0 +1,17 @@
+.addTodo{
+    position: relative;
+    &__form{
+        &__checkboxContainer{
+            position: absolute;
+            top: 16px;
+            left: 10px;
+        }
+        &__text{
+            width: 100%;
+            padding: 15px 40px;
+            border: 0;
+            outline: 0;
+            border-radius: 5px;
+        }
+   }
+}
