@@ -3,7 +3,7 @@ import AddTodo from './../AddTodo/AddTodo'
 import './Header.scss'
 import sunIcon from './../../assets/images/icon-moon.svg'
 
-export default function Header({handleSubmit,todoTitle}) {
+export default function Header() {
   return (
     <header className='header'>
       <div className="header__inner">
@@ -12,7 +12,6 @@ export default function Header({handleSubmit,todoTitle}) {
           <img src={sunIcon} alt="" />
         </button>
       </div>
-      <AddTodo handleSubmit={handleSubmit} todoTitle={todoTitle} />
     </header>
   )
 }

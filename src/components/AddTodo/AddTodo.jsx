@@ -5,12 +5,12 @@ import CustomCheckmark from '../CustomCheckmark/CustomCheckmark'
 import { todoReducer, initialState } from '../../reducers/TodoReducer'; // Adjust path as needed
 
 
-export default function AddTodo({handleSubmit,todoTitle,checkboxref}) {
+export default function AddTodo({handleSubmit,todoTitle,checkboxref,formRef}) {
   
 
   return (
      <div className="addTodo">
-      <form onSubmit={handleSubmit} className='addTodo__form' >
+      <form ref={formRef} onSubmit={handleSubmit} className='addTodo__form' >
         <input
           ref={todoTitle}
           className='addTodo__form__text'

@@ -4,8 +4,8 @@ import './customcheckmark.scss'
 export default function CustomCheckmark({done,checkboxref}) {
   return (
         <label class="checkbox">
-            <input type="checkbox"   />
-            <span class="checkmark"></span>
+            <input type="checkbox" name='checkbox' checked={done}  />
+            <span class="checkmark" ></span>
         </label>
 )
 }

@@ -11,7 +11,7 @@ export const todoReducer = (state, action)=> {
       return [...state, {
         id: Date.now(),
         text: action.payload.text,
-        done: false
+        done: action.payload.done
       }];
     }
     default: {
