@@ -1,29 +1,21 @@
-//define reducer intial state
-//define reducer functions
-//export both to be used in componenets 
-const intialState = [
-    {
-        id:Date.nowt(),
-        title:'javascript tutorial for free',
-        isCompleted:false
-    },
-    {
-        id:Date.nowt(),
-        title:'javascript tutorial for free',
-        isCompleted:false
-    },
-    {
-        id:Date.nowt(),
-        title:'javascript tutorial for free',
-        isCompleted:false
-    },
-    {
-        id:Date.nowt(),
-        title:'javascript tutorial for free',
-        isCompleted:false
-    }
-]
+//rewrite reducer
+export const initialState = [
+  { id: 0, text: 'Visit Kafka Museum', done: true },
+  { id: 1, text: 'Watch a puppet show', done: false },
+  { id: 2, text: 'Lennon Wall pic', done: false }
+];
 
-const todoReducer = (intialState,action)=>{
-    
+export const todoReducer = (state, action)=> {
+  switch (action.type) {
+    case 'ADD_TODO': {
+      return [...state, {
+        id: Date.now(),
+        text: action.payload.text,
+        done: false
+      }];
+    }
+    default: {
+      return state
+    }
+  }
 }

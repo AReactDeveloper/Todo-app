@@ -1,5 +1,6 @@
 .checkbox {
     cursor: pointer;
+    position: relative;
     //hide input default styling
     & input {
         position: absolute;

@@ -1,10 +1,10 @@
 import React from 'react'
 import './customcheckmark.scss'
 //reusable custom checkmark to be placed in the form and on the list
-export default function CustomCheckmark() {
+export default function CustomCheckmark({done,checkboxref}) {
   return (
         <label class="checkbox">
-            <input type="checkbox"  />
+            <input type="checkbox"   />
             <span class="checkmark"></span>
         </label>
 )
