@@ -10,10 +10,10 @@
     & button{
         color: var(--bs-darker-lt);
         &:hover{
-            color: blue;
+            color: var(--bs-primary);
         }
         &.active{
-            color: blue;
+            color: var(--bs-primary);
         }
     }
 }

@@ -9,8 +9,9 @@ Create TodoList component for listing and reordering to-do items v
 reorder
 fix checked issue v
 Create TodoItem component for displaying and managing individual cto-dos v
-create the todo footer with count and clear compelete
-Create Filter component for filtering to-do items
+create the todo footer with count and clear compelete v
+Create Filter component for filtering to-do items v
+
 make the theme context dakr light
 drag and drop functionality
 testing

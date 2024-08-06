@@ -23,7 +23,7 @@ export default function TodoList({ state, handleToggle, handleDelete , handleCle
 
 
   // Conditionally render based how many todos are there
-  const element = state.length === 0 ? (
+  const element = filteredState.length === 0 ? (
     <p className='notodos'>No todos available.</p> 
   ) : (
       <>
