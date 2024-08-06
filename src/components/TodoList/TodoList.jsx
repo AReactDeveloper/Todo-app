@@ -1,11 +1,12 @@
 import React from 'react'
 import TodoItem from '../TodoItem/TodoItem'
+import './TodoList.scss'
 
-export default function TodoList({state,handleToggle}) {
+export default function TodoList({state,handleToggle,handleDelete}) {
   return (
-    <div>
+    <div className='TodoList'>
       {state.map(todo=>{
-        return <TodoItem id={todo.id} title={todo.text} done={todo.done} handleToggle={handleToggle} />
+        return <TodoItem handleDelete={handleDelete} id={todo.id} title={todo.text} done={todo.done} handleToggle={handleToggle} />
       })}
     </div>
   )

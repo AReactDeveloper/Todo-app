@@ -1,7 +1,9 @@
 @use 'reset'; //reset file
-@use 'normalize'; //normlize css
 @use 'root'; //root with all varribles
 
+body{
+    font-family: var(--ff-primary);
+}
 
 .App{
     min-height: 100vh;

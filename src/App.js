@@ -11,7 +11,6 @@ export default function App() {
   const todoTitle = useRef()
   const formRef = useRef()
 
-  const [isChecked,setIsChecked] = useState(true)
 
   const handleSubmit = e=>{
     e.preventDefault()
@@ -44,15 +43,19 @@ export default function App() {
     
   }
 
-  const handleCheckBoxChane = e=>{
-    setIsChecked(e.target.checked)
-  }
 
+  //toggle compeleted
   const handleToggle = (id,done)=>{
-    console.log("handleToggle")
     dispatch({type:'SET_DONE',payload:{
       id : id,
       done: !done
+    }})
+  }
+
+  //delete functionality
+  const handleDelete = (id)=>{
+    dispatch({type:'DELETE_TODO',payload:{
+      id : id
     }})
   }
 
@@ -61,8 +64,8 @@ export default function App() {
     <div className='App'>
         <div className='App__inner'>
           <Header />
-          <AddTodo handleCheckBoxChane={handleCheckBoxChane} formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
-          <TodoList handleToggle={handleToggle} state={state}/>
+          <AddTodo formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
+          <TodoList handleDelete={handleDelete} handleToggle={handleToggle} state={state}/>
         </div>
     </div>
   )

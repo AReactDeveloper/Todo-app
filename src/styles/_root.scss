@@ -1,23 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 /* Colors */
 :root {
     --bs-primary: hsl(220, 98%, 61%);
     --bs-secondary: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
     /* Neutral Colors for Light Theme */
-    --bs-light: hsl(0, 0%, 98%);
-    --bs-lighter: hsl(236, 33%, 92%);
-    --bs-lightest: hsl(233, 11%, 84%);
-    --bs-dark: hsl(236, 9%, 61%);
-    --bs-darker: hsl(235, 19%, 35%);
+    --bs-light-lt: hsl(0, 0%, 98%);
+    --bs-lighter-lt: hsl(236, 33%, 92%);
+    --bs-lightest-lt: hsl(233, 11%, 84%);
+    --bs-dark-lt: hsl(236, 9%, 61%);
+    --bs-darker-lt: hsl(235, 19%, 35%);
 
     /* Neutral Colors for Dark Theme */
-    --bs-darkest: hsl(235, 21%, 11%);
-    --bs-dark: hsl(235, 24%, 19%);
-    --bs-light-dark: hsl(234, 39%, 85%);
-    --bs-light-dark-hover: hsl(236, 33%, 92%);
-    --bs-darker-dark: hsl(234, 11%, 52%);
-    --bs-darkest-dark: hsl(233, 14%, 35%);
-    --bs-darkest-dark-2: hsl(237, 14%, 26%);
+    --bs-darkest-dt: hsl(235, 21%, 11%);
+    --bs-dark-dt: hsl(235, 24%, 19%);
+    --bs-light-dt: hsl(234, 39%, 85%);
+    --bs-light-hover-dt: hsl(236, 33%, 92%);
+    --bs-darker-dt: hsl(234, 11%, 52%);
+    --bs-darkest-dt-2: hsl(233, 14%, 35%);
+    --bs-darkest-dt-3: hsl(237, 14%, 26%);
 
     /* Typography */
     /* Font Sizes */
@@ -27,6 +28,8 @@
     --ff-primary: 'Josefin Sans', sans-serif;
     --fw-regular: 400;
     --fw-bold: 700;
+
+    --br-5 : 5px;
 }
 
 
