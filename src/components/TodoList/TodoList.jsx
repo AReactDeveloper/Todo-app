@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.scss';
 import Footer from "../Footer/Footer";
+import { ThemeContext } from '../../context/ThemeContext';
 
 export default function TodoList({ state, handleToggle, handleDelete , handleClear }) {
+
+    const {theme} = useContext(ThemeContext)
+
 
   const [filter,setFilter] = useState('all')
 
@@ -49,7 +53,7 @@ export default function TodoList({ state, handleToggle, handleDelete , handleCle
   //fragment compoenent solves the issue by allowing us to have in the same componenet
   return (
     <>
-  <div className='TodoList'>
+  <div className={theme == 'light' ? 'TodoList' : 'TodoList dark'}>
     <>{element}</>
     <div className="todoListFooter">
       <button>{state.length} items Left</button>

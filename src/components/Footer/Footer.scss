@@ -16,4 +16,8 @@
             color: var(--bs-primary);
         }
     }
+    &.dark{
+        background-color: var(--bs-dark-dt);
+        color: var(--bs-darker-dt);
+    }
 }

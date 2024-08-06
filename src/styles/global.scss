@@ -22,4 +22,12 @@ body{
         background-image: url('./../assets/images/bg-desktop-light.jpg');
         background-position: top;
     }
+    &.dark{
+        background-color: var(--bs-darkest-dt);
+        background-image: url('./../assets/images/bg-mobile-dark.jpg');
+        @media (min-width : 500px) {
+            background-image: url('./../assets/images/bg-desktop-dark.jpg');
+            background-position: top;
+        }
+    }
 }

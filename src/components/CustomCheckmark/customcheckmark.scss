@@ -58,4 +58,14 @@
         transform: rotate(45deg);
     }
 
+    &.dark{
+        & .checkmark {
+        background-color: var(--bs-dark-dt);
+        outline: 1px solid var(--bs-darker-dt);
+    }
+        &:hover input~.checkmark {
+            background-color: var(--bs-darkest-dt-3);
+        }
+    }
+
 }

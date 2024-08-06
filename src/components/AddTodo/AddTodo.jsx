@@ -1,12 +1,14 @@
-import React, { useReducer, useRef } from 'react'
+import React, { useContext, useReducer, useRef } from 'react'
 import './addtodo.scss'
-import CustomCheckmark from '../CustomCheckmark/CustomCheckmark'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export default function AddTodo({handleSubmit,todoTitle,formRef}) {
   
+    const {theme} = useContext(ThemeContext)
+
 
   return (
-     <div className="addTodo">
+     <div className={theme == 'light' ? "addTodo" : "addTodo dark"}>
       <form ref={formRef} onSubmit={handleSubmit} className='addTodo__form' >
         <input
           ref={todoTitle}
@@ -17,7 +19,7 @@ export default function AddTodo({handleSubmit,todoTitle,formRef}) {
           placeholder='Create a new todo ...'
         />
         <div className='addTodo__form__checkboxContainer'>
-          <label className="checkbox">
+          <label className={theme == 'light' ? "checkbox" : "checkbox dark"}>
             <input type="checkbox" name='checkbox'   />
             <span className="checkmark" ></span>
         </label>        

@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './footer.scss'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export default function Footer({handleFilterChange,filter}) {
+
+    const {theme,toggleTheme} = useContext(ThemeContext)
+
+
   return (
-    <footer className='footer' >
+    <footer className={theme == 'light' ? 'footer' : 'footer dark'} >
         <button
             className={filter == 'all' ? 'active' : ''}
             onClick={()=>handleFilterChange('all')}

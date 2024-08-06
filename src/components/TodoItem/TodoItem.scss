@@ -6,11 +6,17 @@
     justify-content: space-between;
     gap: 40px;
     padding: 15px;
-    border-bottom: 1px solid var(--bs-lightest-lt);
+    box-shadow: 0 0.5px 1px var(--bs-lightest-lt);
     &__title{
-        flex: 1;
-        font-size: 16px;
-        font-weight: 600;
+    flex: 1;
+    font-size: 16px;
+    font-weight: 600;
+    &.item-done {
+        text-decoration: line-through;
+        text-decoration-color: black;
+        text-decoration-thickness: 1px;
+        color: var(--bs-lightest-lt) ;
+    }
     }
     & .checkbox {
         display: block;
@@ -27,12 +33,13 @@
         }
     }
 
-    &.item-done{
-        text-decoration: line-through;
-        text-decoration-color: black;
-        text-decoration-thickness:1px;
-        color: var(--bs-lightest-lt) !important;
-    }
+    &.dark{
+        box-shadow: 0 0.5px 1px var(--bs-darker-dt);
+        color: var(--bs-lightest-lt);
+        & .item-done{
+            color: var(--bs-darker-lt);
+        }
+    } 
 }
 .todoListFooter{
     display: flex;

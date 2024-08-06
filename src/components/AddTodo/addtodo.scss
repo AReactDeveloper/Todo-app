@@ -15,4 +15,9 @@
             border-radius: var(--br-5);
         }
    }
+   &.dark{
+        form > input{
+            background-color: var(--bs-dark-dt);
+        }
+   }
 }

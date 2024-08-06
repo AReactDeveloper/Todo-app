@@ -1,13 +1,15 @@
-import React, { useReducer, useRef, useState } from 'react'
+import React, { useContext, useReducer, useRef, useState } from 'react'
 import { todoReducer , initialState} from './reducers/todoReducer'
 import Header from './components/Header/Header'
 import './styles/global.scss'
 import TodoList from './components/TodoList/TodoList'
 import AddTodo from './components/AddTodo/AddTodo'
+import { ThemeContext } from './context/ThemeContext'
 
 export default function App() {
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
+  const {theme} = useContext(ThemeContext)
 
   const todoTitle = useRef()
   const formRef = useRef()
@@ -65,15 +67,15 @@ export default function App() {
     dispatch({type:'CLEAR_COMPLETED'})
   }
 
-  
+  console.log(theme)
   
   return (
-    <div className='App'>
-        <div className='App__inner'>
+        <div className={theme == 'light' ? 'App' : 'App dark'}>
+          <div className='App__inner'>
           <Header />
           <AddTodo formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
           <TodoList handleClear={handleClear} handleDelete={handleDelete} handleToggle={handleToggle} state={state}/>
+          </div>
         </div>
-    </div>
   )
 }
