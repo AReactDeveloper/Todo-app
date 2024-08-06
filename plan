@@ -6,9 +6,9 @@ Set up project structure with directories for components, hooks, and styles v
 Implement state management with useReducer and define initial state v
 Create AddTodo component for adding new to-do items v
 Create TodoList component for listing and reordering to-do items v
-fix checked issue v
-Create TodoItem component for displaying and managing individual to-dos v
-reorder dnd
+reorder
+fix checked issue
+Create TodoItem component for displaying and managing individual to-dos
 Create Filter component for filtering to-do items
 Integrate components into the main App component and manage state
 Implement drag-and-drop functionality for reordering to-do items

@@ -1,18 +1,16 @@
-@use 'imports';
 @use 'reset'; //reset file
 @use 'normalize'; //normlize css
 @use 'root'; //root with all varribles
 
 
 .App{
-    font-family: "Work Sans",sans-serif;
     min-height: 100vh;
     background-color: var(--bs-light);
     background-image: url('./../assets/images/bg-mobile-light.jpg');
     background-position:top;
     background-size: 100% 30%;//calculated from the design intialy 
     background-repeat: no-repeat;
-    padding-inline: 25px;
+    padding-inline: 40px;
     &__inner{
         max-width: 600px;
         margin-inline:auto;

@@ -5,7 +5,7 @@ import CustomCheckmark from '../CustomCheckmark/CustomCheckmark'
 import { todoReducer, initialState } from '../../reducers/TodoReducer'; // Adjust path as needed
 
 
-export default function AddTodo({handleToggle,handleSubmit,todoTitle,formRef,handleCheckBoxChane}) {
+export default function AddTodo({handleSubmit,todoTitle,checkboxref,formRef}) {
   
 
   return (
@@ -20,10 +20,7 @@ export default function AddTodo({handleToggle,handleSubmit,todoTitle,formRef,han
           placeholder='Create a new todo ...'
         />
         <div className='addTodo__form__checkboxContainer'>
-            <label class="checkbox" >
-            <input  type="checkbox" name='checkbox'   />
-            <span class="checkmark" ></span>
-          </label>
+          <CustomCheckmark checkboxRef={checkboxref} />
         </div>
       </form>
     </div>

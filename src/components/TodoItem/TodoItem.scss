@@ -5,20 +5,13 @@
     justify-content: space-between;
     gap: 40px;
     padding: 15px;
-    border-bottom: 0.5px solid var(--bs-lightest);
-    color: var(--bs-darkest);
+    border: 1px solid black;
     &__title{
-        font-weight: 500;
         flex: 1;
     }
     & .checkbox {
         display: block;
         margin-bottom: 18px;
-    }
-
-    &.done{
-        color: var(--bs-lightest);
-        text-decoration: line-through;
     }
     
 }
