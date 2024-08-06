@@ -2,6 +2,7 @@
     color: var(--bs-light);
     &__inner{
         & h1{
+            font-size: 1.8rem;
             font-weight: var(--fw-bold);
             letter-spacing: 10px;
         }
