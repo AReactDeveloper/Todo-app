@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 
 export default function TodoList({ state, handleToggle, handleDelete , handleClear }) {
 
-  const [filter,setFilter] = useState('completed')
+  const [filter,setFilter] = useState('all')
 
   const filteredState = state.filter(todo=>{
       switch(filter){
@@ -56,7 +56,7 @@ export default function TodoList({ state, handleToggle, handleDelete , handleCle
       <button onClick={handleClear}>Clear Completed</button>
     </div>
   </div>
-    <Footer handleFilterChange={handleFilterChange} />
+    <Footer handleFilterChange={handleFilterChange} filter={filter} />
   </>
   )
 }
