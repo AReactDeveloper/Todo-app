@@ -33,11 +33,19 @@ export default function App() {
       isDone = false
     }    
 
-    dispatch({type:'ADD_TODO', payload : {
-      text:todoTitle.current.value,
-      done:isDone
-    }})
-    todoTitle.current.value = ''
+    if(todoTitle.current.value == ''){
+      alert('todo cannot be empty')
+    }else{
+      dispatch({type:'ADD_TODO', payload : {
+        text:todoTitle.current.value,
+        done:isDone
+      }})
+
+      todoTitle.current.value = ''
+    }
+
+    
+
     //check if chekcbox is checked and reset its value
     const checkbox = formRef.current.querySelector('input[name="checkbox"]');
     if (checkbox) {
@@ -67,7 +75,6 @@ export default function App() {
     dispatch({type:'CLEAR_COMPLETED'})
   }
 
-  console.log(theme)
   
   return (
         <div className={theme == 'light' ? 'App' : 'App dark'}>
