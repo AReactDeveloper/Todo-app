@@ -1,3 +1,6 @@
+import { ACTIONS } from "../utils/constants";
+
+
 //rewrite reducer
 export const initialState = [
   { id: 0, text: 'Visit Kafka Museum', done: true },
@@ -7,14 +10,14 @@ export const initialState = [
 
 export const todoReducer = (state, action)=> {
   switch (action.type) {
-    case 'ADD_TODO': {
+    case ACTIONS.ADD_TODO : {
       return [...state, {
         id: Date.now(),
         text: action.payload.text,
         done: action.payload.done
       }];
     }
-    case 'SET_DONE': {
+    case ACTIONS.SET_TODO: {
   // Iterate over the state array and update the 'done' status of the matching item
   return state.map(item => {
     if (item.id === action.payload.id) {
