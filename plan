@@ -12,6 +12,7 @@ reorder dnd
 Create Filter component for filtering to-do items
 Integrate components into the main App component and manage state
 Implement drag-and-drop functionality for reordering to-do items
+Add CSS styles and ensure responsive design
 Implement accessibility features such as ARIA attributes and keyboard navigation
 Write and execute unit tests for components and state management logic
 Perform integration testing to ensure proper component interaction
@@ -21,3 +22,16 @@ Configure CI/CD pipelines for continuous integration and deployment
 Deploy application to hosting service
 Write and update documentation including README file
 Monitor application performance and make necessary updates
+
+// Apply the filter to the todos
+const filteredTodos = state.todos.filter(todo => {
+switch (state.filter) {
+case 'active':
+return !todo.completed;
+case 'completed':
+return todo.completed;
+case 'all':
+default:
+return true;
+}
+});

@@ -4,11 +4,6 @@ import Header from './components/Header/Header'
 import './styles/global.scss'
 import TodoList from './components/TodoList/TodoList'
 import AddTodo from './components/AddTodo/AddTodo'
-import { ACTIONS } from './utils/constants'
-
-//dnd 
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
 
 export default function App() {
   const [state, dispatch] = useReducer(todoReducer, initialState);
@@ -36,7 +31,7 @@ export default function App() {
       isDone = false
     }    
     
-    dispatch({type:ACTIONS.ADD_TODO, payload : {
+    dispatch({type:'ADD_TODO', payload : {
       text:todoTitle.current.value,
       done:isDone
     }})
@@ -51,7 +46,7 @@ export default function App() {
 
   const handleToggle = (id, done) => {
     console.log(id,done)
-    dispatch({ type: ACTIONS.SET_TODO, payload: { id:id, done:done } });
+    dispatch({ type: 'SET_DONE', payload: { id:id, done:done } });
   };
 
 
@@ -59,15 +54,12 @@ export default function App() {
  
 
   return (
-    <DndProvider backend={HTML5Backend}>
-      <div className='App'>
-          <div className='App__inner'>
-            <Header />
-            <AddTodo  formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
-            <TodoList state={state} handleToggle={handleToggle}/>
-          </div>
-      </div>
-    </DndProvider>
-
+    <div className='App'>
+        <div className='App__inner'>
+          <Header />
+          <AddTodo  formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
+          <TodoList state={state} handleToggle={handleToggle}/>
+        </div>
+    </div>
   )
 }
