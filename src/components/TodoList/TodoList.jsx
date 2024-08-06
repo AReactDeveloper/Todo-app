@@ -4,6 +4,8 @@ import './TodoList.scss';
 import Footer from "../Footer/Footer";
 import { ThemeContext } from '../../context/ThemeContext';
 
+
+
 export default function TodoList({ state, handleToggle, handleDelete , handleClear }) {
 
     const {theme} = useContext(ThemeContext)
