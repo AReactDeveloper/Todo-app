@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './customcheckmark.scss'
 //reusable custom checkmark to be placed in the form and on the list
-export default function CustomCheckmark({done,checkboxref}) {
+export default function CustomCheckmark({done,handleToggle,id}) {
+
+  const [isChecked,setIsChecked] = useState(done)
+
+  useEffect(() => {
+    setIsChecked(done);
+  }, [done]);
+
+  const handleChange =  ()=>{
+    setIsChecked(!isChecked)
+    handleToggle(id,done);
+  }
+
   return (
         <label class="checkbox">
-            <input type="checkbox" name='checkbox' checked={done}  />
+            <input onChange={()=>handleChange(id)} type="checkbox" name='checkbox' checked={isChecked}  />
             <span class="checkmark" ></span>
         </label>
 )

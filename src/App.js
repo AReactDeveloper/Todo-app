@@ -1,5 +1,5 @@
-import React, { useReducer, useRef } from 'react'
-import { todoReducer , initialState} from './reducers/TodoReducer'
+import React, { useReducer, useRef, useState } from 'react'
+import { todoReducer , initialState} from './reducers/todoReducer'
 import Header from './components/Header/Header'
 import './styles/global.scss'
 import TodoList from './components/TodoList/TodoList'
@@ -10,6 +10,8 @@ export default function App() {
 
   const todoTitle = useRef()
   const formRef = useRef()
+
+  const [isChecked,setIsChecked] = useState(true)
 
   const handleSubmit = e=>{
     e.preventDefault()
@@ -42,14 +44,25 @@ export default function App() {
     
   }
 
+  const handleCheckBoxChane = e=>{
+    setIsChecked(e.target.checked)
+  }
+
+  const handleToggle = (id,done)=>{
+    console.log("handleToggle")
+    dispatch({type:'SET_DONE',payload:{
+      id : id,
+      done: !done
+    }})
+  }
 
   console.log(state)
   return (
     <div className='App'>
         <div className='App__inner'>
           <Header />
-          <AddTodo formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
-          <TodoList state={state}/>
+          <AddTodo handleCheckBoxChane={handleCheckBoxChane} formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
+          <TodoList handleToggle={handleToggle} state={state}/>
         </div>
     </div>
   )

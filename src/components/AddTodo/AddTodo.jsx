@@ -2,10 +2,7 @@ import React, { useReducer, useRef } from 'react'
 import './addtodo.scss'
 import CustomCheckmark from '../CustomCheckmark/CustomCheckmark'
 
-import { todoReducer, initialState } from '../../reducers/TodoReducer'; // Adjust path as needed
-
-
-export default function AddTodo({handleSubmit,todoTitle,checkboxref,formRef}) {
+export default function AddTodo({handleSubmit,todoTitle,formRef}) {
   
 
   return (
@@ -20,7 +17,10 @@ export default function AddTodo({handleSubmit,todoTitle,checkboxref,formRef}) {
           placeholder='Create a new todo ...'
         />
         <div className='addTodo__form__checkboxContainer'>
-          <CustomCheckmark checkboxRef={checkboxref} />
+          <label class="checkbox">
+            <input type="checkbox" name='checkbox'   />
+            <span class="checkmark" ></span>
+        </label>        
         </div>
       </form>
     </div>
