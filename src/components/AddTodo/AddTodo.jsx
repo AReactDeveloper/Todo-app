@@ -17,9 +17,9 @@ export default function AddTodo({handleSubmit,todoTitle,formRef}) {
           placeholder='Create a new todo ...'
         />
         <div className='addTodo__form__checkboxContainer'>
-          <label class="checkbox">
+          <label className="checkbox">
             <input type="checkbox" name='checkbox'   />
-            <span class="checkmark" ></span>
+            <span className="checkmark" ></span>
         </label>        
         </div>
       </form>

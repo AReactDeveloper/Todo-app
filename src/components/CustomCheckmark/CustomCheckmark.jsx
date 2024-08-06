@@ -15,9 +15,9 @@ export default function CustomCheckmark({done,handleToggle,id}) {
   }
 
   return (
-        <label class="checkbox">
+        <label className="checkbox">
             <input onChange={()=>handleChange(id)} type="checkbox" name='checkbox' checked={isChecked}  />
-            <span class="checkmark" ></span>
+            <span className="checkmark" ></span>
         </label>
 )
 }

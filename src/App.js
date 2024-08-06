@@ -8,6 +8,7 @@ import AddTodo from './components/AddTodo/AddTodo'
 export default function App() {
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
+
   const todoTitle = useRef()
   const formRef = useRef()
 
@@ -59,13 +60,19 @@ export default function App() {
     }})
   }
 
-  console.log(state)
+  //handle clear completed
+  const handleClear = ()=>{
+    dispatch({type:'CLEAR_COMPLETED'})
+  }
+
+  
+  
   return (
     <div className='App'>
         <div className='App__inner'>
           <Header />
           <AddTodo formRef={formRef} handleSubmit={handleSubmit} todoTitle={todoTitle} />
-          <TodoList handleDelete={handleDelete} handleToggle={handleToggle} state={state}/>
+          <TodoList handleClear={handleClear} handleDelete={handleDelete} handleToggle={handleToggle} state={state}/>
         </div>
     </div>
   )

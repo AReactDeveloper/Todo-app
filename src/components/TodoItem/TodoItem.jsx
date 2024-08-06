@@ -1,4 +1,3 @@
-
 import React from 'react'
 import CustomCheckmark from '../CustomCheckmark/CustomCheckmark'
 import './TodoItem.scss'

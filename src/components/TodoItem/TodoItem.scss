@@ -14,7 +14,7 @@
     }
     & .checkbox {
         display: block;
-        margin-bottom: 18px;
+        margin-bottom: 22px;
     }
 
     & button img{
@@ -29,8 +29,18 @@
 
     &.item-done{
         text-decoration: line-through;
+        text-decoration-color: black;
+        text-decoration-thickness:1px;
         color: var(--bs-lightest-lt) !important;
     }
-    
+}
+.todoListFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    & button{
+        color: var(--bs-dark-lt);
+    }
 }
 
