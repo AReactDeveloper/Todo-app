@@ -8,6 +8,7 @@ export default function Footer({handleFilterChange,filter}) {
 
 
   return (
+    <>
     <footer className={theme == 'light' ? 'footer' : 'footer dark'} >
         <button
             className={filter == 'all' ? 'active' : ''}
@@ -22,5 +23,7 @@ export default function Footer({handleFilterChange,filter}) {
             onClick={()=>handleFilterChange('completed')}
         >Completed</button>
     </footer>
+    <p className='drag-msg'>drag and drop to reorder list</p>
+    </>
   )
 }
