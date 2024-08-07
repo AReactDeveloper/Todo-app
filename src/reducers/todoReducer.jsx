@@ -31,6 +31,9 @@ export const todoReducer = (state, action) => {
     case 'CLEAR_COMPLETED': {
       return state.filter(todo => !todo.done)
     }
+    case 'REORDER_TODOS': {
+            return action.payload;
+        }
     
     default:
       return state;
