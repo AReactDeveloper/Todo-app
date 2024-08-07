@@ -18,6 +18,7 @@
    &.dark{
         form > input{
             background-color: var(--bs-dark-dt);
+            color: white;
         }
    }
 }

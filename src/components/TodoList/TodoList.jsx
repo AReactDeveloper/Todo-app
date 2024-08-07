@@ -13,8 +13,8 @@ export default function TodoList({ state, handleToggle, handleDelete, handleClea
     const [filteredState,SetfilteredState] = useState(state)
 
     
-
-    const newState = state.filter(todo => {
+    React.useEffect(()=>{
+      const newState = state.filter(todo => {
         switch (filter) {
             case 'all':
                 return true;
@@ -26,10 +26,9 @@ export default function TodoList({ state, handleToggle, handleDelete, handleClea
                 return true;
         }
     });
-
-    React.useEffect(()=>{
-          SetfilteredState(newState)
-    },[])
+    SetfilteredState(newState)
+  },[filter,state])
+  
 
     const handleFilterChange = (filter) => {
         setFilter(filter);
@@ -38,6 +37,8 @@ export default function TodoList({ state, handleToggle, handleDelete, handleClea
     const handleReorder = (newOrder) => {
         SetfilteredState(newOrder)
     };
+
+    
 
     const element = filteredState.length === 0 ? (
         <p className='notodos'>No todos available.</p>
